@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:responsiveWindowApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="545" Width="632">
     <Grid>
+        <Label Content="Vendor Details" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,16,0,0"/>
+        <Label Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,43,0,0"/>
+        <TextBox Margin="82,47,5,0" TextWrapping="Wrap" Text="Jane Doe" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <Label Content="Preferred Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,75,0,0"/>
+        <TextBox Margin="109,79,5,0" TextWrapping="Wrap" Text="Jane" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <Label Content="Phone" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,107,0,0"/>
+        <TextBox Margin="82,111,5,0" TextWrapping="Wrap" Text="0123 456 789" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <Label Content="Mobile" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,139,0,0"/>
+        <TextBox Margin="82,143,5,0" TextWrapping="Wrap" Text="0123 456 789" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <Label Content="P (Home)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,171,0,0"/>
+        <TextBox Margin="82,175,5,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <Label Content="P (Work)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,203,0,0"/>
+        <TextBox Margin="82,207,5,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <Label Content="Email" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,235,0,0"/>
+        <TextBox Margin="82,239,5,0" TextWrapping="Wrap" Text="jane.doe@outlook.com" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <Label Content="Email 2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,267,0,0"/>
+        <TextBox Margin="82,271,5,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <Label Content="Address" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,299,0,0"/>
+        <TextBox Margin="83,303,5,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <Label Content="Suburb" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,331,0,0"/>
+        <TextBox Margin="82,335,5,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <Label Content="State" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,363,0,0"/>
+        <TextBox Margin="82,367,428,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <Label Content="Post Code" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="244,363,0,0"/>
+        <TextBox Margin="316,367,194,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
 
     </Grid>
 </Window>
