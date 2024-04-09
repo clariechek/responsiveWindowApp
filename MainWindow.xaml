@@ -5,145 +5,149 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:responsiveWindowApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="626" Width="730">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Label Content="Estimate" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="55"/>
+        Title="Account" Height="800" Width="730">
+    <Border Padding="10">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="179*"/>
-                <ColumnDefinition Width="186*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <StackPanel>
-                <Label Content="Vendor Details"/>
-                <StackPanel Height="360" Width="345">
-                    <Grid
-                        Width="344" Height="315">
-                        <Grid.RowDefinitions
-        >
-                            <RowDefinition
-                                Height="Auto"/>
-                            <RowDefinition
-                                Height="Auto"/>
-                            <RowDefinition
-                                Height="Auto"/>
-                            <RowDefinition
-                                Height="Auto"/>
-                            <RowDefinition
-                                Height="Auto"/>
-                            <RowDefinition
-                                Height="Auto"/>
-                            <RowDefinition
-                                Height="Auto"/>
-                            <RowDefinition
-                                Height="Auto"/>
-                            <RowDefinition
-                                Height="Auto"/>
-                            <RowDefinition
-                                Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions
-        >
-                            <ColumnDefinition
-                                Width="Auto"/>
-                            <ColumnDefinition
-        />
-                        </Grid.ColumnDefinitions>
-                        <Label
-                            Content="Label" Margin="6,6,6,6" Grid.RowSpan="2"/>
-                        <TextBox
-                            Text="TextBox" TextWrapping="Wrap" Margin="6,6,6,6" Grid.Column="1"/>
-                        <Label
-                            Content="Label" Margin="6,6,6,6" Grid.Row="1"/>
-                        <TextBox
-                            Text="TextBox" TextWrapping="Wrap" Grid.Row="1" Margin="6,6,6,6" Grid.Column="1"/>
-                        <Label
-                            Grid.Row="2" Grid.RowSpan="2" Margin="6,6,6,6" Content="Label"/>
-                        <TextBox
-                            Text="TextBox" TextWrapping="Wrap" Grid.Row="2" Margin="6,6,6,6" Grid.Column="1"/>
-                        <Label
-                            Grid.Row="3" Grid.RowSpan="2" Margin="6,6,6,6" Content="Label"/>
-                        <TextBox
-                            Text="TextBox" TextWrapping="Wrap" Grid.Row="3" Margin="6,6,6,6" Grid.Column="1"/>
-                        <Label
-                            Grid.Row="4" Grid.RowSpan="2" Margin="6,6,6,6" Content="Label"/>
-                        <TextBox
-                            Text="TextBox" TextWrapping="Wrap" Grid.Row="4" Margin="6,6,6,6" Grid.Column="1"/>
-                        <Label
-                            Grid.Row="5" Grid.RowSpan="2" Margin="6,6,6,6" Content="Label"/>
-                        <TextBox
-                            Text="TextBox" TextWrapping="Wrap" Grid.Row="5" Margin="6,6,6,6" Grid.Column="1"/>
-                        <Label
-                            Grid.Row="6" Grid.RowSpan="2" Margin="6,6,6,6" Content="Label"/>
-                        <TextBox
-                            Text="TextBox" TextWrapping="Wrap" Grid.Row="6" Margin="6,6,6,6" Grid.Column="1"/>
-                        <Label
-                            Grid.Row="7" Grid.RowSpan="2" Margin="6,6,6,6" Content="Label"/>
-                        <TextBox
-                            Text="TextBox" TextWrapping="Wrap" Grid.Row="7" Margin="6,6,6,6" Grid.Column="1"/>
-                        <Label
-                            Grid.Row="8" Grid.RowSpan="2" Margin="6,6,6,6" Content="Label"/>
-                        <TextBox
-                            Text="TextBox" TextWrapping="Wrap" Grid.Row="8" Margin="6,6,6,6" Grid.Column="1"/>
-                        <Label
-                            Content="Label" Margin="6,6,6,6" Grid.Row="9"/>
-                        <TextBox
-                            Text="TextBox" TextWrapping="Wrap" Grid.Row="9" Margin="6,6,6,6" Grid.Column="1"/>
-                    </Grid>
-                    <Grid
-                        Height="42">
-                        <Grid.ColumnDefinitions
-        >
-                            <ColumnDefinition
-                                Width="Auto"/>
-                            <ColumnDefinition
-                                Width="127*"/>
-                            <ColumnDefinition
-                                Width="Auto"/>
-                            <ColumnDefinition
-                                Width="134*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label
-                            Content="Label" Margin="6,6,6,6"/>
-                        <TextBox
-                            Text="TextBox" TextWrapping="Wrap" Margin="6,6,6,6" Grid.Column="1"/>
-                        <Label
-                            Grid.Column="2" Content="Label" Margin="6,6,6,6"/>
-                        <TextBox
-                            Text="TextBox" TextWrapping="Wrap" Margin="6,6,6,6" Grid.Column="3"/>
-                    </Grid>
-                </StackPanel>
-            </StackPanel>
-            <StackPanel Grid.Column="1">
-                <Label Content="Label"/>
-                <Grid Height="118">
+            
+            <!-- Vendor Details -->
+            <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                <Label Content="Vendor Details" FontWeight="Bold" />
+                
+                <!-- Name, Phone, Email, Address, Suburb -->
+                <Grid>
+                    
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
+
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <Label Content="Label" Margin="6,6,6,6"/>
-                    <TextBox TextWrapping="Wrap" Text="TextBox" Grid.Column="1" Margin="6,6,6,6"/>
-                    <Label Content="Label" Grid.Row="1" Margin="6,6,6,6"/>
-                    <TextBox TextWrapping="Wrap" Text="TextBox" Grid.Row="1" Grid.Column="1" Margin="6,6,6,6"/>
-                    <Label Content="Label" Grid.Row="2" Margin="6,6,6,6"/>
-                    <TextBox TextWrapping="Wrap" Text="TextBox" Grid.Row="2" Grid.Column="1" Margin="6,6,6,6"/>
+
+                    <!-- Name -->
+                    <Label Grid.Column="0" Grid.Row="0"  Content="Name" />
+                    <TextBox Grid.Column="1" Grid.Row="0" Text="Jane Doe" FontWeight="Bold" VerticalAlignment="Center" Padding="2" />
+                    
+                    <!-- Preferred Name -->
+                    <Label Grid.Column="0" Grid.Row="1" Content="Preferred Name" />
+                    <TextBox Grid.Column="1" Grid.Row="1" Text="Jane" FontWeight="Bold" VerticalAlignment="Center" Padding="2"/>
+
+                    <!-- Phone -->
+                    <Label Grid.Column="0" Grid.Row="2" Content="Phone" />
+                    <TextBox Grid.Column="1" Grid.Row="2" Text="0123 456 789" FontWeight="Bold" VerticalAlignment="Center" Padding="2"/>
+
+                    <!-- Mobile -->
+                    <Label Grid.Column="0" Grid.Row="3" Content="Mobile" />
+                    <TextBox Grid.Column="1" Grid.Row="3" Text="0123 456 789" VerticalAlignment="Center" Padding="2"/>
+
+                    <!-- P (Home) -->
+                    <Label Grid.Column="0" Grid.Row="4" Content="P (Home)" />
+                    <TextBox Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Padding="2"/>
+
+                    <!-- P (Work) -->
+                    <Label Grid.Column="0" Grid.Row="5" Content="P (Work)" />
+                    <TextBox Grid.Column="1" Grid.Row="5" Text="0123 456 789" VerticalAlignment="Center" Padding="2"/>
+
+                    <!-- Email -->
+                    <Label Grid.Column="0" Grid.Row="6" Content="Email" />
+                    <TextBox Grid.Column="1" Grid.Row="6" Text="jane.doe@outlook.com" FontWeight="Bold" VerticalAlignment="Center" Padding="2"/>
+
+                    <!-- Email 2 -->
+                    <Label Grid.Column="0" Grid.Row="7" Content="Email 2" />
+                    <TextBox Grid.Column="1" Grid.Row="7" VerticalAlignment="Center" Padding="2"/>
+
+                    <!-- Address -->
+                    <Label Grid.Column="0" Grid.Row="8" Content="Address" />
+                    <TextBox Grid.Column="1" Grid.Row="8" VerticalAlignment="Center" Padding="2"/>
+
+                    <!-- Suburb -->
+                    <Label Grid.Column="0" Grid.Row="9" Content="Suburb" />
+                    <TextBox Grid.Column="1" Grid.Row="9" VerticalAlignment="Center" Padding="2"/>
                 </Grid>
-                <Label Content="Label"/>
-                <TextBox TextWrapping="Wrap" Text="TextBox" Width="354" Height="246"/>
+
+                <!-- State and PostCode -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <!-- State -->
+                    <Label Grid.Column="0" Grid.Row="0" Content="State" />
+                    <TextBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" Padding="2"/>
+
+                    <!-- PostCode -->
+                    <Label Grid.Column="2" Grid.Row="0" Content="Post Code" />
+                    <TextBox Grid.Column="3" Grid.Row="0" VerticalAlignment="Center" Padding="2"/>
+
+                </Grid>
+                
+                <!-- View Contact Log -->
+                <Button Content="VIEW CONTACT LOG" FontWeight="Bold" Padding="20 2 20 2"  HorizontalAlignment="Right" Margin="0 10 0 0" BorderBrush="LightGray" />
+            </StackPanel>
+
+            <!-- General Info -->
+            <StackPanel Grid.Column="1">
+                <Label Content="General Info" FontWeight="Bold" Margin="10 0 10 0"/>
+                
+                <!-- Active -->
+                <Label Content="Active" Margin="10 0 10 0"/>
+                <Grid Margin="10 0 10 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <!-- Initial Auction -->
+                    <Label Grid.Column="0" Grid.Row="0" Content="Initial Auction" />
+                    <TextBox Grid.Column="1" Grid.Row="0"  Text="April 2005" FontWeight="Bold" VerticalAlignment="Center" Padding="2" />
+
+                    <!-- Prev Consignments -->
+                    <Label Grid.Column="0" Grid.Row="1" Content="Prev. Consignments" />
+                    <TextBox Grid.Column="1" Grid.Row="1"  Text="2" FontWeight="Bold" VerticalAlignment="Center" Padding="2" />
+                </Grid>
+
+                <!-- Notes -->
+                <Grid Margin="0 10 0 0" Background="LightSalmon" Height="250px">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Margin="10 5 10 10" Content="Notes" FontWeight="Bold" />
+                    <TextBlock Grid.Row="1" Padding="2" Margin="10 0 10 10" Text="" TextAlignment="Left" TextWrapping="Wrap" Background="White"  />
+                    
+                    
+                </Grid>
+                
+
             </StackPanel>
         </Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Height="25" Width="320">
-            <Button Content="View Contact Log" VerticalAlignment="Center" Width="150" Height="25" Margin="0,0,10,0"/>
-            <Button Content="Save" VerticalAlignment="Center" Padding="0,0,0,0" Width="150" Height="25" Margin="10,0,0,0"/>
-        </StackPanel>
-    </Grid>
+    </Border>
 </Window>
