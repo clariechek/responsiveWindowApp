@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="responsiveWindowApp.UserControls.HistoryUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:responsiveWindowApp.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" d:Background="White">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Previous Estimates -->
+        <StackPanel Grid.Row="0" Orientation="Vertical">
+            <Label Content="Previous Estimates" FontWeight="Bold" />
+            <DataGrid ItemsSource="{Binding PreviousEstimates}" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Est. Number" Width="2*" Binding="{Binding EstimateNumber}" />
+                    <DataGridTextColumn Header="Value" Width="*" Binding="{Binding Value}" />
+                    <DataGridTextColumn Header="Bottles" Width="2*" Binding="{Binding Bottles}" />
+                    <DataGridTextColumn Header="Shipping" Width="2*" Binding="{Binding Shipping}" />
+                    <DataGridTextColumn Header="Sub" Width="*" Binding="{Binding Sub}" />
+                    <DataGridTextColumn Header="Est. Boxes" Width="*" Binding="{Binding EstimateBoxes}" />
+                    <DataGridTextColumn Header="Date" Width="2*" Binding="{Binding Date}" />
+                    <DataGridTextColumn Header="Conv" Width="*" Binding="{Binding Conv}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+        <!-- Previous Consignments -->
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+            <Label Content="Previous Consignments" FontWeight="Bold" />
+            <DataGrid ItemsSource="{Binding PreviousConsignments}" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Number" Width="2*" Binding="{Binding Number}" />
+                    <DataGridTextColumn Header="Value" Width="*" Binding="{Binding Value}" />
+                    <DataGridTextColumn Header="Date Received" Width="*" Binding="{Binding DateReceived}" />
+                    <DataGridTextColumn Header="Initial Auction" Width="2*" Binding="{Binding InitialAuction}" />
+                    <DataGridTextColumn Header="Boxes" Width="*" Binding="{Binding Boxes}" />
+                    <DataGridTextColumn Header="Insurance" Width="*" Binding="{Binding Insurance}" />
+                    <DataGridTextColumn Header="Conv" Width="*" Binding="{Binding Conv}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+        <!-- Notes -->
+        <StackPanel Grid.Row="2" Orientation="Vertical" Background="LightSalmon">
+            <Label Content="Notes" FontWeight="Bold" Margin="10" />
+            <TextBlock Text="{Binding Notes}" TextWrapping="Wrap" Background="White" Margin="10" Padding="2" Height="80px" />
+        </StackPanel>
+
+        <!-- Estimate -->
+        <StackPanel Grid.Row="3" Orientation="Vertical" Background="Black" >
+            <!-- Estimate header -->
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                <Label Content="Estimate" FontWeight="Bold" Margin="10 0 0 0" Foreground="White" />
+                <Label Content="E00546-2312-01" Foreground="Orange" />
+            </StackPanel>
+
+            <!-- Estimate table using Appraisal datagrid -->
+            <DataGrid Margin="10 0" ItemsSource="{Binding Estimate}" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="WineId" Width="*" Binding="{Binding WineId}"/>
+                    <DataGridTextColumn Header="Wine Name" Width="5*" Binding="{Binding WineName}" />
+                    <DataGridTextColumn Header="Vintage" Width="*" Binding="{Binding Vintage}"/>
+                    <DataGridTextColumn Header="Qty" Width="*" Binding="{Binding Qty}"/>
+                    <DataGridTextColumn Header="Bottle" Width="*" Binding="{Binding Bottle}"/>
+                    <DataGridTextColumn Header="Rsv" Width="*" Binding="{Binding Rsv}"/>
+                    <DataGridTextColumn Header="Low" Width="*" Binding="{Binding Low}"/>
+                    <DataGridTextColumn Header="High" Width="*" Binding="{Binding High}"/>
+                    <DataGridTextColumn Header="Origin" Width="*" Binding="{Binding Origin}" />
+                    <DataGridTextColumn Header="Done" Width="*" Binding="{Binding Done}"/>
+                    <DataGridTextColumn Header="Source" Width="*" Binding="{Binding Source}"/>
+                    <DataGridTextColumn Header="Notes" Width="2*" Binding="{Binding Notes}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+
+</UserControl>
