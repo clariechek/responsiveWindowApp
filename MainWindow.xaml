@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:responsiveWindowApp"
         mc:Ignorable="d"
-        Title="MainWindow" d:DesignHeight="700" d:DesignWidth="930">
+        Title="MainWindow" d:DesignHeight="700" d:DesignWidth="1200">
     <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
@@ -18,6 +18,198 @@
             <TabControl>
                 <!-- Account tab -->
                 <TabItem Header="Account">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        
+                        <!-- Top buttons -->
+                        <Grid Grid.Row="0" HorizontalAlignment="Right">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            
+                            <!-- Left button -->
+                            <Button Grid.Column="0" Content="" FontWeight="Bold" Padding="20 2 20 2"  HorizontalAlignment="Right" Margin="0 10 10 0" BorderBrush="LightGray" />
+                            
+                            <!-- State button -->
+                            <Button Grid.Column="1" Content="NSW" FontWeight="Bold" Padding="20 2 20 2"  HorizontalAlignment="Left" Margin="0 10 0 0" Background="LightBlue" BorderBrush="AliceBlue" />
+                        </Grid>
+
+                        <!-- Vendor Details & General Info-->
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Vendor Details -->
+                            <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                                <Label Content="Vendor Details" FontWeight="Bold" />
+
+                                <!-- Name, Phone, Email, Address, Suburb -->
+                                <Grid>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Name -->
+                                    <Label Grid.Column="0" Grid.Row="0"  Content="Name" />
+                                    <TextBox Grid.Column="1" Grid.Row="0" Text="Jane Doe" FontWeight="Bold" VerticalAlignment="Center" Padding="2" />
+
+                                    <!-- Preferred Name -->
+                                    <Label Grid.Column="0" Grid.Row="1" Content="Preferred Name" />
+                                    <TextBox Grid.Column="1" Grid.Row="1" Text="Jane" FontWeight="Bold" VerticalAlignment="Center" Padding="2"/>
+
+                                    <!-- Phone -->
+                                    <Label Grid.Column="0" Grid.Row="2" Content="Phone" />
+                                    <TextBox Grid.Column="1" Grid.Row="2" Text="0123 456 789" FontWeight="Bold" VerticalAlignment="Center" Padding="2"/>
+
+                                    <!-- Mobile -->
+                                    <Label Grid.Column="0" Grid.Row="3" Content="Mobile" />
+                                    <TextBox Grid.Column="1" Grid.Row="3" Text="0123 456 789" VerticalAlignment="Center" Padding="2"/>
+
+                                    <!-- P (Home) -->
+                                    <Label Grid.Column="0" Grid.Row="4" Content="P (Home)" />
+                                    <TextBox Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Padding="2"/>
+
+                                    <!-- P (Work) -->
+                                    <Label Grid.Column="0" Grid.Row="5" Content="P (Work)" />
+                                    <TextBox Grid.Column="1" Grid.Row="5" Text="0123 456 789" VerticalAlignment="Center" Padding="2"/>
+
+                                    <!-- Email -->
+                                    <Label Grid.Column="0" Grid.Row="6" Content="Email" />
+                                    <TextBox Grid.Column="1" Grid.Row="6" Text="jane.doe@outlook.com" FontWeight="Bold" VerticalAlignment="Center" Padding="2"/>
+
+                                    <!-- Email 2 -->
+                                    <Label Grid.Column="0" Grid.Row="7" Content="Email 2" />
+                                    <TextBox Grid.Column="1" Grid.Row="7" VerticalAlignment="Center" Padding="2"/>
+
+                                    <!-- Address -->
+                                    <Label Grid.Column="0" Grid.Row="8" Content="Address" />
+                                    <TextBox Grid.Column="1" Grid.Row="8" VerticalAlignment="Center" Padding="2"/>
+
+                                    <!-- Suburb -->
+                                    <Label Grid.Column="0" Grid.Row="9" Content="Suburb" />
+                                    <TextBox Grid.Column="1" Grid.Row="9" VerticalAlignment="Center" Padding="2"/>
+
+                                    <!-- State -->
+                                    <Label Grid.Column="0" Grid.Row="10" Content="State" />
+                                    <TextBox Grid.Column="1" Grid.Row="10" VerticalAlignment="Center" Padding="2"/>
+
+                                    <!-- PostCode -->
+                                    <Label Grid.Column="0" Grid.Row="11" Content="Post Code" />
+                                    <TextBox Grid.Column="1" Grid.Row="11" VerticalAlignment="Center" Padding="2"/>
+                                </Grid>
+                            </StackPanel>
+
+                            <!-- General Info -->
+                            <StackPanel Grid.Column="1">
+                                <Label Content="General Info" FontWeight="Bold" Margin="10 0 10 0"/>
+
+                                <!-- Active -->
+                                <Label Content="Active" Margin="10 0 10 0"/>
+                                <Grid Margin="10 0 10 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Initial Auction -->
+                                    <Label Grid.Column="0" Grid.Row="0" Content="Initial Auction" />
+                                    <TextBox Grid.Column="1" Grid.Row="0"  Text="April 2005" FontWeight="Bold" VerticalAlignment="Center" Padding="2" />
+
+                                    <!-- Prev Consignments -->
+                                    <Label Grid.Column="0" Grid.Row="1" Content="Prev. Consignments" />
+                                    <TextBox Grid.Column="1" Grid.Row="1"  Text="2" FontWeight="Bold" VerticalAlignment="Center" Padding="2" />
+                                </Grid>
+
+                                <!-- Notes -->
+                                <Grid Margin="0 10 0 0" Background="LightSalmon" Height="250px">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Label Grid.Row="0" Margin="10 5 10 10" Content="Notes" FontWeight="Bold" />
+                                    <TextBlock Grid.Row="1" Padding="2" Margin="10 0 10 10" Text="" TextAlignment="Left" TextWrapping="Wrap" Background="White"  />
+
+
+                                </Grid>
+
+
+                            </StackPanel>
+                        </Grid>
+
+                        <!-- View Contact Log & Save -->
+                        <Grid Grid.Row="2" Margin="0 0 0 10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- View Contact Log -->
+                            <Button Grid.Column="0" Content="VIEW CONTACT LOG" FontWeight="Bold" Padding="20 2 20 2"  HorizontalAlignment="Right" Margin="0 10 10 0" BorderBrush="LightGray" />
+
+                            <!-- Save -->
+                            <Button Grid.Column="1" Content="SAVE" FontWeight="Bold" Padding="20 2 20 2"  HorizontalAlignment="Left" Margin="0 10 0 0" Background="Green" BorderBrush="Green" />
+                        </Grid>
+
+                        <!-- Estimate -->
+                        <Grid Grid.Row="3" Background="LightSalmon">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Row="0" Content="Estimate" FontWeight="Bold" Padding="10 10 0 0"/>
+
+                            <!-- Estimate table using Appraisal datagrid -->
+                            <DataGrid>
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="WineId" Width="*"/>
+                                    <DataGridTextColumn Header="Wine Name" Width="5*" />
+                                    <DataGridTextColumn Header="Vintage" Width="*"/>
+                                    <DataGridTextColumn Header="Qty" Width="*"/>
+                                    <DataGridTextColumn Header="Bottle" Width="*"/>
+                                    <DataGridTextColumn Header="Rsv" Width="*"/>
+                                    <DataGridTextColumn Header="Low" Width="*"/>
+                                    <DataGridTextColumn Header="High" Width="*"/>
+                                    <DataGridTextColumn Header="Origin" Width="*" />
+                                    <DataGridTextColumn Header="Done" Width="*"/>
+                                    <DataGridTextColumn Header="Source" Width="*"/>
+                                    <DataGridTextColumn Header="Notes" Width="2*"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </Grid>
                 </TabItem>
                 
                 <!-- History tab -->
