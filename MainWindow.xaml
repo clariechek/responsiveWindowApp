@@ -18,7 +18,7 @@
             <TabControl>
                 <!-- Account tab -->
                 <TabItem Header="Account">
-                    <Grid>
+                    <Grid Margin="10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto" />
@@ -214,14 +214,14 @@
                 
                 <!-- History tab -->
                 <TabItem Header="History">
-                    <Grid>
+                    <Grid Margin="10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        
+
                         <!-- Previous Estimates -->
                         <StackPanel Grid.Row="0" Orientation="Vertical">
                             <Label Content="Previous Estimates" FontWeight="Bold" />
@@ -238,7 +238,7 @@
                                 </DataGrid.Columns>
                             </DataGrid>
                         </StackPanel>
-                        
+
                         <!-- Previous Consignments -->
                         <StackPanel Grid.Row="1" Orientation="Vertical">
                             <Label Content="Previous Consignments" FontWeight="Bold" />
@@ -260,7 +260,7 @@
                             <Label Content="Notes" FontWeight="Bold" Margin="10" />
                             <TextBlock Text="" TextWrapping="Wrap" Background="White" Margin="10" Padding="2" Height="80px" />
                         </StackPanel>
-                        
+
                         <!-- Estimate -->
                         <StackPanel Grid.Row="3" Orientation="Vertical" Background="Black" >
                             <!-- Estimate header -->
@@ -268,7 +268,7 @@
                                 <Label Content="Estimate" FontWeight="Bold" Margin="10 0 0 0" Foreground="White" />
                                 <Label Content="E00546-2312-01" Foreground="Orange" />
                             </StackPanel>
-                            
+
                             <!-- Estimate table using Appraisal datagrid -->
                             <DataGrid Margin="10 0">
                                 <DataGrid.Columns>
@@ -289,10 +289,92 @@
                         </StackPanel>
                     </Grid>
                 </TabItem>
-                
-                
+
                 <!-- Task Summary tab -->
                 <TabItem Header="Task Summary">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <!-- Button row -->
+                        <Grid Grid.Row="0" Margin="10 0 10 10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Left buttons -->
+                            <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                                <Button Content=">" Background="DarkBlue" Foreground="White" FontSize="14" Height="25px" Width="28px" Margin="0 0 10 0" />
+                                <Button Content="" Background="LimeGreen"  Foreground="White" FontSize="14" Height="25px" Width="28px" Margin="0 0 10 0" />
+                                <Button Content="" Background="Gray" Foreground="White" FontSize="14" Height="25px" Width="28px" Margin="0 0 10 0" />
+                                <Button Content="" Background="LightSkyBlue" Foreground="White" FontSize="14" Height="25px" Width="28px" Margin="0 0 10 0" />
+                                <Button Content="" Background="IndianRed"  Foreground="White" FontSize="14" Height="25px" Width="28px" Margin="0 0 10 0" />
+                                <Button Content="X" Background="Black"  Foreground="White" FontSize="14" Height="25px" Width="28px" />
+                            </StackPanel>
+                            
+                            <!-- Right buttons -->
+                            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 0 15">
+                                <Button Content="" Background="LimeGreen" Foreground="White" FontSize="14" Height="25px" Width="28px" Margin="0 0 10 0" />
+                                <Button Content="NSW" FontWeight="Bold" Background="LightBlue"  Foreground="DarkBlue" FontSize="14" Height="25px" Padding="10 2 10 2" />
+                            </StackPanel>
+                        </Grid>
+                        
+                        <!-- Task -->
+                        <Grid Grid.Row="1" Margin="10 0 10 10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            
+                            <Label Grid.Row="0" Content="Task" FontWeight="Bold" />
+                            <UserControl Grid.Row="1" Background="LightGray"/>
+                        </Grid>
+                        
+                        <!-- Attachments -->
+                        <Grid Grid.Row="2" Margin="10 0 10 10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Row="0" Content="Attachments" FontWeight="Bold" />
+                            <UserControl Grid.Row="1" Background="LightGray"/>
+                        </Grid>
+
+                        <!-- Estimate -->
+                        <Grid Grid.Row="3" Background="LightSalmon">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <!-- Estimate header -->
+                            <Label Grid.Row="0" Content="Estimate" Foreground="White" FontWeight="Bold" Margin="10 10 10 0" />
+                            
+                            <!-- Estimate table using Appraisal datagrid -->
+                            <DataGrid Grid.Row="1" Margin="10 0 10 10">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="WineId" Width="*"/>
+                                    <DataGridTextColumn Header="Wine Name" Width="5*" />
+                                    <DataGridTextColumn Header="Vintage" Width="*"/>
+                                    <DataGridTextColumn Header="Qty" Width="*"/>
+                                    <DataGridTextColumn Header="Bottle" Width="*"/>
+                                    <DataGridTextColumn Header="Rsv" Width="*"/>
+                                    <DataGridTextColumn Header="Low" Width="*"/>
+                                    <DataGridTextColumn Header="High" Width="*"/>
+                                    <DataGridTextColumn Header="Origin" Width="*" />
+                                    <DataGridTextColumn Header="Done" Width="*"/>
+                                    <DataGridTextColumn Header="Source" Width="*"/>
+                                    <DataGridTextColumn Header="Notes" Width="2*"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </Grid>
                 </TabItem>
             </TabControl>
         </Grid>
