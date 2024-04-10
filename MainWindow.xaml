@@ -214,6 +214,80 @@
                 
                 <!-- History tab -->
                 <TabItem Header="History">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <!-- Previous Estimates -->
+                        <StackPanel Grid.Row="0" Orientation="Vertical">
+                            <Label Content="Previous Estimates" FontWeight="Bold" />
+                            <DataGrid>
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Est. Number" Width="2*" />
+                                    <DataGridTextColumn Header="Value" Width="*" />
+                                    <DataGridTextColumn Header="Bottles" Width="2*" />
+                                    <DataGridTextColumn Header="Shipping" Width="2*"/>
+                                    <DataGridTextColumn Header="Sub" Width="*" />
+                                    <DataGridTextColumn Header="Est. Boxes" Width="*" />
+                                    <DataGridTextColumn Header="Date" Width="2*" />
+                                    <DataGridTextColumn Header="Conv" Width="*" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </StackPanel>
+                        
+                        <!-- Previous Consignments -->
+                        <StackPanel Grid.Row="1" Orientation="Vertical">
+                            <Label Content="Previous Consignments" FontWeight="Bold" />
+                            <DataGrid>
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Number" Width="2*" />
+                                    <DataGridTextColumn Header="Value" Width="*" />
+                                    <DataGridTextColumn Header="Date Received" Width="*" />
+                                    <DataGridTextColumn Header="Initial Auction" Width="2*"/>
+                                    <DataGridTextColumn Header="Boxes" Width="*" />
+                                    <DataGridTextColumn Header="Insurance" Width="*" />
+                                    <DataGridTextColumn Header="Conv" Width="*" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </StackPanel>
+
+                        <!-- Notes -->
+                        <StackPanel Grid.Row="2" Orientation="Vertical" Background="LightSalmon" >
+                            <Label Content="Notes" FontWeight="Bold" Margin="10" />
+                            <TextBlock Text="" TextWrapping="Wrap" Background="White" Margin="10" Padding="2" Height="80px" />
+                        </StackPanel>
+                        
+                        <!-- Estimate -->
+                        <StackPanel Grid.Row="3" Orientation="Vertical" Background="Black" >
+                            <!-- Estimate header -->
+                            <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                                <Label Content="Estimate" FontWeight="Bold" Margin="10 0 0 0" Foreground="White" />
+                                <Label Content="E00546-2312-01" Foreground="Orange" />
+                            </StackPanel>
+                            
+                            <!-- Estimate table using Appraisal datagrid -->
+                            <DataGrid Margin="10 0">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="WineId" Width="*"/>
+                                    <DataGridTextColumn Header="Wine Name" Width="5*" />
+                                    <DataGridTextColumn Header="Vintage" Width="*"/>
+                                    <DataGridTextColumn Header="Qty" Width="*"/>
+                                    <DataGridTextColumn Header="Bottle" Width="*"/>
+                                    <DataGridTextColumn Header="Rsv" Width="*"/>
+                                    <DataGridTextColumn Header="Low" Width="*"/>
+                                    <DataGridTextColumn Header="High" Width="*"/>
+                                    <DataGridTextColumn Header="Origin" Width="*" />
+                                    <DataGridTextColumn Header="Done" Width="*"/>
+                                    <DataGridTextColumn Header="Source" Width="*"/>
+                                    <DataGridTextColumn Header="Notes" Width="2*"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </StackPanel>
+                    </Grid>
                 </TabItem>
                 
                 
